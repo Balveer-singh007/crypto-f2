@@ -1,0 +1,251 @@
+* {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  font-family: "Poppins", sans-serif;
+  font-family: "REM", sans-serif;
+}
+
+.head {
+  position: fixed;
+  width: 100vw;
+  height: 45px;
+  background-color: black;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  color: gray;
+  font-size: 18px;
+  padding: 25px;
+  z-index: 1000;
+}
+
+.left {
+  width: 60vw;
+  margin: 10px;
+  display: flex;
+}
+.title {
+  color: white;
+  font-weight: 600;
+  font-size: 24px;
+}
+.dot {
+  color: rgb(31, 100, 238);
+  font-size: 28px;
+}
+.right {
+  width: 60vw;
+  display: flex;
+  margin: 6px;
+  gap: 15px;
+  justify-content: end;
+  font-size: 18px;
+  font-weight: 800;
+  padding: 0px 8vw;
+}
+.dash {
+  border-radius: 18%;
+  width: 110px;
+  padding: 7px 4px;
+  height: 35px;
+  color: white;
+  background-color: rgb(46, 97, 199);
+  border: 1px solid black;
+  font-size: 15px;
+  cursor: pointer;
+  font-weight: 400;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 37px;
+  height: 16px;
+  top: 10px;
+  bottom: 10px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #3c5060;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 19px;
+  width: 19px;
+  left: 0px;
+  bottom: 0px;
+  background-color: rgb(31, 100, 238);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #3c5060;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #3c5060;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(18px);
+  -ms-transform: translateX(18px);
+  transform: translateX(18px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.btn-container {
+  position: relative;
+  top: 100px;
+  display: flex;
+  width: 100%;
+  height: 80%;
+}
+
+.gridbutton {
+  width: 50%;
+  height: 60px;
+  font-size: 25px;
+  font-weight: 500;
+  color: white;
+  border: 1px black;
+}
+
+.gridbutton:hover,
+.listbutton:hover {
+  color: white;
+  background-color: #3c50609c;
+}
+.listbutton {
+  width: 50%;
+  height: 60px;
+  font-size: 25px;
+  font-weight: 500;
+  color: white;
+  border: 1px black;
+}
+
+.active-button {
+  color: rgb(31, 100, 238);
+  border-bottom: 1px solid rgb(31, 100, 238);
+}
+
+.section {
+  padding: 0px 100px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.card-container {
+  position: relative;
+  top: 150px;
+  height: 200px;
+  width: 230px;
+  margin-bottom: 18px;
+  background-color: rgba(26, 23, 23, 0.808);
+  color: #667179;
+  padding: 20px;
+  line-height: 30px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 10px;
+}
+
+.card-top {
+  display: flex;
+  gap: 16px;
+  background-color: rgba(26, 23, 23, 0.808);
+}
+
+.card-top > img {
+  border-radius: 50%;
+  background-color: rgba(26, 23, 23, 0.808);
+}
+
+.card-title {
+  font-size: 15px;
+  line-height: 18px;
+}
+
+.card-title .bottom {
+  background-color: rgba(26, 23, 23, 0.808);
+}
+
+.card-title .top {
+  color: whitesmoke;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: rgba(26, 23, 23, 0.808);
+}
+
+.percentage {
+  margin-top: 10px;
+  border: 3px solid rgb(126, 190, 30);
+  background-color: rgba(26, 23, 23, 0.808);
+  border-radius: 25%;
+  width: 65px;
+  height: 25px;
+  font-size: 12px;
+  text-align: center;
+  line-height: 22px;
+  color: rgb(126, 190, 30);
+}
+
+.rate {
+  color: rgb(126, 190, 30);
+  line-height: 40px;
+  background-color: rgba(26, 23, 23, 0.808);
+}
+
+.volume,
+.Market {
+  color: #667179;
+  background-color: rgba(26, 23, 23, 0.808);
+}
+table {
+  margin: 10%;
+  top: 250px;
+  color: #667179;
+  gap: 40px;
+  border-collapse: collapse;
+  text-align: center;
+  line-height: 50px;
+  font-size: 16px;
+  padding: 20px;
+}
+td {
+  gap: 100px;
+  text-align: center;
+  padding: 0px 12px;
+}
+.positive-change {
+  color: green;
+}
+
+.negative-change {
+  color: red;
+}
